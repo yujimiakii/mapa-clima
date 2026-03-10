@@ -95,3 +95,25 @@ button:hover {
     border-radius: 10px;
     margin-top: 10px;
 }
+/* Estilo específico para o botão de localização */
+#location-btn {
+    background-color: #4cd137; /* Um verde bonito */
+    padding: 12px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#location-btn:hover {
+    background-color: #44bd32;
+    transform: scale(1.1);
+}
+
+/* Ajuste na search-box para caber tudo em telas pequenas */
+.search-box {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite quebrar linha em celulares pequenos */
+}
