@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estação Meteorológica</title>
+    
+    <!-- 1. CSS do Mapa (Leaflet) sempre no HEAD -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- 2. Seu CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 3. Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Digite o nome da cidade...">
+            <button id="search-btn">Buscar</button>
+        </div>
+
+        <div id="weather-card" class="weather-card hidden">
+            <h2 id="city-name">Cidade</h2>
+            <p id="date"></p>
+            <img id="weather-icon" src="" alt="Ícone do tempo">
+            <h1 id="temperature">0°C</h1>
+            <p id="description">Descrição</p>
+            
+            <div class="details">
+                <div class="col">
+                    <p>Umidade</p>
+                    <p id="humidity">--%</p>
+                </div>
+                <div class="col">
+                    <p>Vento</p>
+                    <p id="wind-speed">-- km/h</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- O MAPA DEVE FICAR AQUI, DENTRO DO BODY -->
+        <div id="map" style="height: 200px; margin-top: 20px; border-radius: 15px; display: none;"></div>
+
+        <p id="error-msg" class="error-msg hidden">Cidade não encontrada. Tente novamente!</p>
+    </div>
+
+    <!-- SCRIPTS SEMPRE NO FINAL, ANTES DE FECHAR O BODY -->
+    <!-- Primeiro o Leaflet, depois o seu script -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
